@@ -5,19 +5,17 @@
 ## Supported devices
 
 ### Tested and working:
-- Acer Chromebook 14 for Work (CP5-471) (codename: LARS)
+- Dell Chromebook 13 3380
 
-### Should work but not tested:
-- Acer Chromebook 11 (C771, C771T) (codename: LARS)
-- ASUS Chromebook Flip C302 (codename: CAVE)
+### Ones that havent been tested
 - other chromebooks with sklnau8825max sound card
 
 ## Supported operating systems
 
-### Tested and working:
+### Tested and working ###
 - Ubuntu 20.04 and derivatives (Linux Mint 20.x)
 
-### Tested and not working:
+### Tested and not working ###
 - Ubuntu 22.04
 - Debian 11
 
@@ -29,34 +27,30 @@
 ### Tested and not working:
 - Linux kernel 5.15.81
 
-I think the compatibility was broken somewhere between Linux kernel 5.10 and 5.15. I did not have time to investigate. If someone is able to do the investigation, please let me know the results.
+This fix does not work on **Ubuntu 21.0 or higher!!! 
+
+It works on Ubuntu 20.04 and Ubuntu 20.04 based distros
 
 ## Guide
 
 ### Prerequisites:
-- supported chromebook
-- Internet connection
-- basic command line knowledge
+- A Chromebook with the sklnau8825max
+- A **Somewhat** stable Internet Connection
+- How to use the **Terminal**
 
-### Firmware installation
+Firmware flash (don't do this if you already flashed or have rw_legacy)
 Install [MrChromebox's UEFI firmware](https://mrchromebox.tech/) on your device.
 <br>Warning!
 <br>This will void your warranty and may brick your device!
 
-### OS installation
+ OS installation
 Normally install one of supported operating systems. Nothing fancy here.
-
-### 1st way - fast and insecure
-> #### 1. Clone the repository and enter it
-> ```
-> git clone https://github.com/PiotrZPL/sklnau8825max-on-linux.git
-> cd sklnau8825max-on-linux
-> ```
-> #### 2. Run the script with root privileges
-> ```
+ 1st way - fast
+1. Clone the repository and enter it
+> git clone https://github.com/Mrmintbook/sklnau8825max.git
+> cd sklnau8825max
+2. Run the script with root privileges
 > sudo ./script.sh
-> ```
-> #### 3. Reboot
 
 ### 2nd way - slower and still insecure
 > #### 1. Clone the repository and enter it
@@ -132,7 +126,8 @@ If, after rebooting, the audio still does not work, go to your audio mixer/volum
 If your audio still does not work, [open an issue in this repository](https://github.com/PiotrZPL/sklnau8825max-on-linux/issues/new) and describe your problem.
 
 ## Credits
-The creation of this repository would not have been possible without:
+The forking and custom script of this repository would not have been possible without:
 - [devendor](https://github.com/devendor/c302ca)
 - [MrChromebox](https://mrchromebox.tech/)
 - [Galliumos Project](https://galliumos.org/)
+- (PiotrZPL) [https://github.com/PiotrZPL]
